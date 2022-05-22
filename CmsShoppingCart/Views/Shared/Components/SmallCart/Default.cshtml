@@ -1,0 +1,16 @@
+﻿@model SmallCartViewModel
+<div style="background-color:darkgray">
+    @if (Model != null)
+    {
+        <p>Broj proizvoda:<span class="badge badge-primary">@Model.NumberOfItems</span></p>
+        <p>Ukupno:<b>@Model.TotalAmount.ToString("C2")</b></p>
+        <a class="btn btn-info  mb-2" asp-controller="Cart" asp-action="Index">Pogledaj košaricu</a>
+        <br />
+        <a class="btn btn-danger" asp-controller="Cart" asp-action="Clear">Očisti košaricu</a>
+    }
+    else
+    {
+        <p style="background-color:darkgray" class="lead m-0">Vaša košarica je prazna.</p>
+    }
+</div>
+    
